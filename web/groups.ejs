@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="<%= baseUrl %>/groups.css">
+    <title>Delta Login</title>
+</head>
+<body class='public-groups'>
+  <header class='site-header'>
+    <img id="delta-chat-logo" src="/delta-chat-logo.svg" alt="Delta Chat logo">
+    <div>
+      <h1>Delta Login</h1>
+      <p>Logged in as <%= address %> (<a href='<%= baseUrl %>/logout'>logout</a>)</p>
+    </div>
+  </header>
+
+    <% if (successMessage) { %>
+    <p style='color: green'><%= successMessage %></p>
+    <% } %>
+
+    <h2>Public groups</h2>
+    <p>There are currently <%= numChats %> public groups.
+    </p>
+
+    <div class='flexcontainer'>
+      <div class='joined-chats'>
+        <h3 title='You are a member of these groups'>Joined</h3>
+        <ul>
+          <% joinedChats.forEach(function({chatId, chatName}) { %>
+          <li>
+            <div class='chat-name'><%= chatName %></div>
+            <div class="already-joined-icon">✓</div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+
+      <div class='unjoined-chats'>
+        <h3 title='You can join these groups'>Available</h3>
+        <ul>
+          <% unjoinedChats.forEach(function({chatId, chatName}) { %>
+          <li>
+            <div class='chat-name'><%= chatName %></div>
+            <div class='join-action' title="Join this group"><a href='<%= baseUrl %>/join/<%= chatId %>'>←</a></div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "deltachat-public-groups",
+  "version": "0.1.0",
+  "description": "This Delta Chat bot allows people to join published Delta Chat groups with a click.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "npx mocha --exit",
+    "start": "node src/index"
+  },
+  "author": "Delta Chat developers",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "deltachat-node-webbot-base": "git://github.com/deltachat-bot/deltachat-node-webbot-base",
+    "ejs": "^3.0.1",
+    "express": "^4.17.1",
+    "sqlite3": "^4.1.0"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,108 @@
+/* Simple CSS reset rules */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+/* Custom rules */
+
+body {
+  padding: 2rem 5rem;
+  max-width: 60rem;
+}
+
+a {
+  color: #916d02;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.site-header img {
+  width: 5em;
+}
+
+.site-header div {
+  color: #6C7D85;
+  text-align: right;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2rem;
+  padding: 2rem 0 0.5rem 0;
+}
+
+h3 {
+  padding: 2rem 0 0.2rem 0;
+  color: grey;
+}
+
+ul {
+  margin: 0 0 1.5rem 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  margin: 0.5rem 0;
+  padding: 0;
+  line-height: 1.5rem;
+}
+
+.chat-name {
+  display: inline-block;
+  font-family: monospace;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.joined-chats .chat-name {
+  font-weight: normal;
+}
+
+.already-joined-icon {
+  display: inline-block;
+  color: #3b7500;
+}
+
+.join-action {
+  display: inline-block;
+  font-family: monospace;
+  font-weight: bold;
+  font-size: 2rem;
+  vertical-align: text-bottom;
+  color: lightgreen;
+}
+
+.join-action a {
+  color: #66cc00;
+  text-decoration: none;
+}
+
+.flexcontainer {
+  max-width: 40rem;
+  display: flex;
+  justify-content: space-between;
+}
