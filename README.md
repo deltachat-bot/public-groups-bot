@@ -18,12 +18,12 @@ To unpublish, send `/unpublish`.
 ## Setup
 
 1. Install the dependencies by running `npm install`.
-2. Configure the bot by saving its email-address and password into `config/local.json`. E.g.:
-```bash
-echo '{
-"email_address": "bot@example.net",
-"email_password": "secretandsecure"
-}' > config/local.json
+2. Configure the bot by writing its email-address and password into `config/local.json` like this:
+```json
+{
+  "email_address": "bot@example.net",
+  "email_password": "secretandsecure"
+}
 ```
 3. Optionally configure the `http_port` (that the bot should serve the web interface on) in `config/local.js` (default: 3000).
 4. Setup a HTTP daemon to reverse-proxy the bot, e.g. nginx.
