@@ -60,20 +60,20 @@ router.get('/join/:chatId', ensureAuthenticated, (req, res) => {
   if (!chat) {
     log("The requested chat_id does not exist")
     req.session.successMessage = "You'd have to create that group first, please. It does not exist yet :)"
-    res.redirect(req.baseUrl)
+    res.redirect(req.baseUrl + '/')
     return
   }
 
   // Shouldn't happen, but better check twice.
   if (!req.session.contactId) {
     log("Error: not contactId in session!")
-    return res.redirect(req.baseUrl)
+    return res.redirect(req.baseUrl + '/')
   }
 
   log(`Adding contact ${req.session.contactId} to group ${chatId}`)
   deltachat.addContactToChat(chatId, req.session.contactId)
   req.session.successMessage = `✓ You joined group ${chat.getName()}`
-  res.redirect(req.baseUrl)
+  res.redirect(req.baseUrl + '/')
 })
 
 /**
@@ -92,7 +92,7 @@ router.get('/logout', ensureAuthenticated, async (req, res) => {
       }
     })
   })
-  res.redirect(req.baseUrl)
+  res.redirect(req.baseUrl + '/')
 })
 
 
