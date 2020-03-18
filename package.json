@@ -10,7 +10,7 @@
   "author": "Delta Chat developers",
   "license": "GPL-3.0",
   "dependencies": {
-    "deltachat-node-webbot-base": "git://github.com/deltachat-bot/deltachat-node-webbot-base",
+    "deltachat-node-webbot-base": "git://github.com/deltachat-bot/deltachat-node-webbot-base.git",
     "ejs": "^3.0.1",
     "express": "^4.17.1",
     "sqlite3": "^4.1.0"
