@@ -23,10 +23,15 @@ router.get('/', ensureAuthenticated, async (req, res) => {
   let joinedChats = []
   let unjoinedChats = []
   chatIds.forEach(chatId => {
-    let data = {
-      "chatId": chatId,
-      "chatName": deltachat.getChat(chatId).getName(),
+    let chat = deltachat.getChat(chatId)
+    if (!chat) {
+      log("chat not found: id=", chatId);
+      return
     }
+    let data = {
+        "chatId": chatId,
+        "chatName": deltachat.getChat(chatId).getName(),
+      }
     if (deltachat.isContactInChat(chatId, contactId)) {
       joinedChats.push(data)
     } else {
