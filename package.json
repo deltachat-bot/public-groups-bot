@@ -12,7 +12,7 @@
   "dependencies": {
     "deltachat-node-webbot-base": "git://github.com/deltachat-bot/deltachat-node-webbot-base.git",
     "ejs": "^3.0.1",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "sqlite3": "^4.1.0"
   },
   "devDependencies": {}
